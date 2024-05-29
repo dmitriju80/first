@@ -22,11 +22,9 @@ public class MainActivity extends AppCompatActivity {
         bite.runInWheel();
 
         //public BankAccount createNewAccount(String typeAccount, String currency)
-       Bank Ushakov = new Bank();
-       Ushakov.createNewAccount("debit_account","RUB");
-
-
-
+     Bank Ushakov = new Bank();
+    Ushakov.createNewAccount("debit_account","RUB");
+Ushakov.showBalance();
     }
 
     public class Hamster {
