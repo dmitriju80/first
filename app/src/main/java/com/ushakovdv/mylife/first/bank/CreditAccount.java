@@ -1,6 +1,6 @@
 package com.ushakovdv.mylife.first.bank;
 
-public class CreditAccount extends BankAccount {
+class CreditAccount extends BankAccount {
 
     protected int creditLimit;
 
@@ -11,7 +11,7 @@ public class CreditAccount extends BankAccount {
     }
 
     @Override
-    public void withdrawCash(int amount) {//выдать наличные
+    public void withdrawCash(int amount) {
         if (this.amount - amount < -creditLimit) {
             System.out.println("У вас недостаточно средств для снятия суммы " + amount + " " + currency);
         } else {

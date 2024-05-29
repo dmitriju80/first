@@ -1,6 +1,6 @@
 package com.ushakovdv.mylife.first.bank;
 
-public class DebitAccount extends BankAccount {
+class DebitAccount extends BankAccount {
 
     public DebitAccount(int amount, String currency) {
         if (amount < 0) {
@@ -12,7 +12,7 @@ public class DebitAccount extends BankAccount {
     }
 
     @Override
-    public void withdrawCash(int amount) {////выдать наличные
+    public void withdrawCash(int amount) {
         if (amount > this.amount) {
             System.out.println("У вас недостаточно средств для снятия суммы " + amount + " " + currency);
         } else {
@@ -22,7 +22,7 @@ public class DebitAccount extends BankAccount {
     }
 
     @Override
-    public void showBalance() {   //показать баланс
+    public void showBalance() {
         System.out.println("На вашем счету осталось " + amount + " " + currency);
     }
 }

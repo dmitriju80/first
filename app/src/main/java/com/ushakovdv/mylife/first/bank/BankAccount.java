@@ -1,6 +1,6 @@
 package com.ushakovdv.mylife.first.bank;
 
-public abstract class BankAccount {
+public class BankAccount {
     protected int amount;           //количество
     protected String currency;      //валюта
 
