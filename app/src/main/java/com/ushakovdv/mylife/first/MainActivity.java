@@ -21,10 +21,9 @@ public class MainActivity extends AppCompatActivity {
         Hamster bite = new Hamster(); // Объявили переменную с типом Hamster
         bite.runInWheel();
 
-        //public BankAccount createNewAccount(String typeAccount, String currency)
-     Bank Ushakov = new Bank();
-    Ushakov.createNewAccount("debit_account","RUB");
-Ushakov.showBalance();
+        BankAccount Ushakov=new Bank().createNewAccount("debit_account","RUB");
+        Ushakov.showBalance();
+        BankAccount Ulya=new Bank().createNewAccount("credit_account","USD");
     }
 
     public class Hamster {

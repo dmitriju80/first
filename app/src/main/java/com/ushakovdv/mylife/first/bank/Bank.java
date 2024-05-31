@@ -1,6 +1,6 @@
 package com.ushakovdv.mylife.first.bank;
 
-public class Bank extends BankAccount {
+public class Bank {
 
     public BankAccount createNewAccount(String typeAccount, String currency) { // создать метод createNewAccount, который принимает на вход строку с типом аккаунта и строку с создаваемой валютой
 
@@ -58,8 +58,5 @@ public class Bank extends BankAccount {
 
         }
     }
-    @Override
-    public void showBalance() {
-        System.out.println("На вашем счету осталось " + amount + " " + currency);
-    }
+
 }
