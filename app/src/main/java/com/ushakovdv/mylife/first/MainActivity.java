@@ -18,25 +18,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Hamster bite = new Hamster(); // Объявили переменную с типом Hamster
-        bite.runInWheel();
 
         BankAccount Ushakov=new Bank().createNewAccount("debit_account","RUB");
         Ushakov.showBalance();
         BankAccount Ulya=new Bank().createNewAccount("credit_account","USD");
     }
 
-    public class Hamster {
-        String name = "Bite";
-        int age = 15;
-        String color = "Белый"; // Цвет
-        int weight = 350; // Вес
 
-        public void runInWheel(){
-            System.out.println ("Бегу, Бегу, Бегу!");
-            weight+=5;
-        }
-
-    }
 
 }
