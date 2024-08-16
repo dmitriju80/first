@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ushakovdv.mylife.first.bank.Bank;
 import com.ushakovdv.mylife.first.bank.BankAccount;
+import com.ushakovdv.mylife.first.hare.Main;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         BankAccount Ushakov=new Bank().createNewAccount("debit_account","RUB");
         Ushakov.showBalance();
         BankAccount Ulya=new Bank().createNewAccount("credit_account","USD");
+   Main run = new Main();
+   run.run();
     }
 
 
