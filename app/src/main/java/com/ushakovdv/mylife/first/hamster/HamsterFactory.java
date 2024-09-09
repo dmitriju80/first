@@ -28,7 +28,7 @@ ArrayList  <Hamster> fabric = new ArrayList <Hamster>();
         }
     }
 /*
-    public void executePrint() {
+    public void ExecutePrint() {
         ... // выведите сообщение: "Вывожу актуальный список хомяков в хранилище:"
         ... // вам нужно напечатать всех хомяков, которые есть в хранилище
     }

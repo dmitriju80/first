@@ -1,11 +1,6 @@
 package com.ushakovdv.mylife.first.command;
 
-import com.ushakovdv.mylife.first.hamster.Hamster;
-import com.ushakovdv.mylife.first.hamster.HamsterFactory;
-
-import java.util.ArrayList;
-
-public class executePrint implements Interface{
+public class ExecutePrint implements Interface{
     public Command command;
     public void executePrint (Command command){
         this.command=command;
