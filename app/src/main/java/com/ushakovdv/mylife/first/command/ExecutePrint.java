@@ -2,7 +2,7 @@ package com.ushakovdv.mylife.first.command;
 
 public class ExecutePrint implements Interface{
     public Command command;
-    public void executePrint (Command command){
+    public ExecutePrint (Command command){
         this.command=command;
     }
     @Override

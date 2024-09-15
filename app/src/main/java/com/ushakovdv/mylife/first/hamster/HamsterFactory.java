@@ -1,5 +1,7 @@
 package com.ushakovdv.mylife.first.hamster;
 
+import com.ushakovdv.mylife.first.command.Client;
+
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
@@ -8,17 +10,23 @@ public class HamsterFactory {
     static final Scanner scanner = new Scanner(System.in);
 ArrayList  <Hamster> fabric = new ArrayList <Hamster>();
 
-    public void start() {
+    public void start(String name) {
         try {
             while (true) {
                 System.out.println("Введите команду...");
 
-                String commandName = scanner.nextLine();
+                //String commandName = scanner.nextLine();
+                String commandName="Печать";
+
+
                if (commandName.equalsIgnoreCase("завершить")) {
                    System.out.println("Программа завершена! Спасибо за то, что пользуетесь нашей сетью хомячих фабрик");
                    break;}
                else {
+                   Client command = new Client();
+                   command.run(commandName);
 
+                   break;
                    //Interface.execute(commandName, this);
                }
                 //, который распознаёт команду и вызывает необходимый метод для её обработки

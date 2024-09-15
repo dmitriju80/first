@@ -1,17 +1,26 @@
 package com.ushakovdv.mylife.first.command;
 
+import com.ushakovdv.mylife.first.hamster.Hamster;
+
+import java.util.Objects;
+
 public class Client {
-    public  void run (){
+    public  void run (String commandName){
 
         Command c = new Command();
-        OpenDoor open = new OpenDoor(c);
-        CloseDoor close = new CloseDoor(c);
-        Invoker i=new Invoker();
 
-        i.setCommand(open);
-        i.exe();
-        i.setCommand(close);
-        i.exe();
+        if (commandName.equalsIgnoreCase("Печать")){
+            ExecutePrint Eprint = new ExecutePrint(c);
+            Invoker i=new Invoker();
+            i.setCommand(Eprint);
+            i.exe();
+        }
+
+
+
+
 
     }
+
+
 }

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.ushakovdv.mylife.first.bank.Bank;
 import com.ushakovdv.mylife.first.bank.BankAccount;
 import com.ushakovdv.mylife.first.command.Client;
+import com.ushakovdv.mylife.first.hamster.HamsterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         Ushakov.showBalance();
         BankAccount Ulya=new Bank().createNewAccount("credit_account","USD");
 
-        Client Ula = new Client();
-        Ula.run();
+        HamsterFactory prog = new HamsterFactory();
+        prog.start("Печать");
     }
 
 
