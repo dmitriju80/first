@@ -1,11 +1,9 @@
 package com.ushakovdv.mylife.first.command;
 
-import com.ushakovdv.mylife.first.hamster.Hamster;
-
-import java.util.Objects;
+import com.ushakovdv.mylife.first.hamster.HamsterFactory;
 
 public class Client {
-    public  void run (String commandName){
+    public  void run (String commandName, HamsterFactory hamsterFactory){
 
         Command c = new Command();
 

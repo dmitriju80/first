@@ -8,7 +8,8 @@ import java.util.Scanner;
 
 public class HamsterFactory {
     static final Scanner scanner = new Scanner(System.in);
-ArrayList  <Hamster> fabric = new ArrayList <Hamster>();
+public ArrayList  <Hamster> fabric = new ArrayList <Hamster>();
+
 
     public void start(String name) {
         try {
@@ -24,10 +25,9 @@ ArrayList  <Hamster> fabric = new ArrayList <Hamster>();
                    break;}
                else {
                    Client command = new Client();
-                   command.run(commandName);
-
+                   command.run(commandName,this);
                    break;
-                   //Interface.execute(commandName, this);
+
                }
                 //, который распознаёт команду и вызывает необходимый метод для её обработки
             }
