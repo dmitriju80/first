@@ -1,6 +1,7 @@
 package com.ushakovdv.mylife.first.hamster;
 
 import com.ushakovdv.mylife.first.command.Client;
+import com.ushakovdv.mylife.first.command.Interface;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -17,15 +18,19 @@ public ArrayList  <Hamster> fabric = new ArrayList <Hamster>();
                 System.out.println("Введите команду...");
 
                 //String commandName = scanner.nextLine();
-                String commandName="Печать";
+                String commandName="Создать Barsik";
+               // String commandName="Печать";
 
 
                if (commandName.equalsIgnoreCase("завершить")) {
                    System.out.println("Программа завершена! Спасибо за то, что пользуетесь нашей сетью хомячих фабрик");
                    break;}
                else {
+                   //Command.execute(commandName, this)
                    Client command = new Client();
-                   command.run(commandName,this);
+                   command.execute(commandName,this);
+
+                   System.out.println("Вывожу актуальный список хомяков в хранилище:"+fabric);
                    break;
 
                }
