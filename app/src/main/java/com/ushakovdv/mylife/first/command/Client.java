@@ -18,17 +18,12 @@ public class Client {
             }
         }
 
-        if (commandName.equalsIgnoreCase("Печать")){
-            ExecutePrint Eprint = new ExecutePrint(c);
-            Invoker i=new Invoker();
-            i.setCommand(Eprint);
-            i.exe();
-        }
-        else if (commandName.equalsIgnoreCase("Создать")){
+
+         if (command.equalsIgnoreCase("Создать")){
             ExecuteCreate Ecreat = new ExecuteCreate(c);
             Invoker i=new Invoker();
             i.setCommand(Ecreat);
-            i.exe();
+            i.exe(commandName, hamsterFactory);
         }
 
 

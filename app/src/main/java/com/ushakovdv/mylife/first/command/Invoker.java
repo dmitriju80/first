@@ -1,10 +1,11 @@
 package com.ushakovdv.mylife.first.command;
 
+import com.ushakovdv.mylife.first.hamster.HamsterFactory;
+
 public class Invoker {
     Interface i;
-    String name;
     public void setCommand (Interface i){this.i=i;}
-    public void exe (){i.execute();}
+    public void exe (String commandName, HamsterFactory hamsterFactory){i.execute(commandName, hamsterFactory);}
 
 
 }

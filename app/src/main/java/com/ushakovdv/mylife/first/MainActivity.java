@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         Ushakov.showBalance();
         BankAccount Ulya=new Bank().createNewAccount("credit_account","USD");
 
-        HamsterFactory prog = new HamsterFactory();
-        prog.start("Печать");
+        HamsterFactory hamsterFactory = new HamsterFactory();
+        hamsterFactory.start("Создать Barsik");
     }
 
 

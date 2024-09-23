@@ -10,15 +10,15 @@ import java.util.Scanner;
 public class HamsterFactory {
     static final Scanner scanner = new Scanner(System.in);
 public ArrayList  <Hamster> fabric = new ArrayList <Hamster>();
+    Client client = new Client();
 
-
-    public void start(String name) {
+    public void start(String commandName) {
         try {
             while (true) {
                 System.out.println("Введите команду...");
 
                 //String commandName = scanner.nextLine();
-                String commandName="Создать Barsik";
+                //String commandName="Создать Barsik";
                // String commandName="Печать";
 
 
@@ -27,10 +27,10 @@ public ArrayList  <Hamster> fabric = new ArrayList <Hamster>();
                    break;}
                else {
                    //Command.execute(commandName, this)
-                   Client command = new Client();
-                   command.execute(commandName,this);
 
-                   System.out.println("Вывожу актуальный список хомяков в хранилище:"+fabric);
+                   client.execute(commandName,this);
+
+                   //System.out.println("Вывожу актуальный список хомяков в хранилище:"+fabric);
                    break;
 
                }
