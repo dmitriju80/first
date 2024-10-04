@@ -3,12 +3,9 @@ package com.ushakovdv.mylife.first.command;
 import com.ushakovdv.mylife.first.hamster.Hamster;
 import com.ushakovdv.mylife.first.hamster.HamsterFactory;
 
-public class ExecuteCreate implements Interface{
+public class DeleteIndex implements Interface {
     public Command command;
-    public ExecuteCreate (Command command){
-        this.command=command;
-    }
-
+    public DeleteIndex (Command command){this.command=command;}
     @Override
     public void execute(String commandName, HamsterFactory hamsterFactory) {
         String name = "";
@@ -23,8 +20,12 @@ public class ExecuteCreate implements Interface{
             }
         }
 
-        hamsterFactory.fabric.add(new Hamster(name,25));
-        System.out.println("Хомяк '" + name + "' создан и добавлен в хранилище");
-
+        if ((Integer.parseInt(name)+1) <= hamsterFactory.fabric.size()){
+            hamsterFactory.fabric.remove(Integer.parseInt(name));
+            System.out.println("Хомяк '" + name + "' удален из хранилища");
+        }
+        else {
+            System.out.println("Хомякa '" + name + "' пока не существует");
+        }
     }
 }

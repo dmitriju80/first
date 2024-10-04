@@ -20,11 +20,26 @@ public class Client {
 
 
          if (command.equalsIgnoreCase("Создать")){
-            ExecuteCreate Ecreat = new ExecuteCreate(c);
+            ExecuteCreate ecreat = new ExecuteCreate(c);
             Invoker i=new Invoker();
-            i.setCommand(Ecreat);
+            i.setCommand(ecreat);
             i.exe(commandName, hamsterFactory);
         }
+
+         else if (command.equalsIgnoreCase("Печать")){
+            ExecutePrint executePrint = new ExecutePrint(c);
+            Invoker i=new Invoker();
+            i.setCommand(executePrint);
+            i.exe(commandName, hamsterFactory);
+
+         }
+         else if (command.equalsIgnoreCase("Удалить")){
+             DeleteIndex deleteIndex = new DeleteIndex(c);
+             Invoker i=new Invoker();
+             i.setCommand(deleteIndex);
+             i.exe(commandName, hamsterFactory);
+
+         }
 
 
 
