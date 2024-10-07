@@ -8,6 +8,8 @@ public class SearchHamster implements Interface{
     @Override
     public void execute(String commandName, HamsterFactory hamsterFactory) {
         String name = "";
+
+
         String command = "";
         boolean commandSave = false;
         for (char i : commandName.toCharArray()){
