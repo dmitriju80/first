@@ -6,4 +6,5 @@ public class Command {
     void executePrint(){};
     void executeCreate(){};
     void deleteIndex (){};
+    void searchHamster (){};
 }
