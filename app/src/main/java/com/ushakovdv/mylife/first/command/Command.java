@@ -7,4 +7,5 @@ public class Command {
     void executeCreate(){};
     void deleteIndex (){};
     void searchHamster (){};
+
 }

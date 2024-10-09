@@ -8,13 +8,20 @@ public class Client {
         Command c = new Command();
         String name = "";
         String command = "";
+        String age = "";
         boolean commandSave = false;
+        boolean comName = false;
+
         for (char i : commandName.toCharArray()){
             if ((i!=' ')&&(!commandSave)){
-            command=command+i;}
-            else if (i==' '){commandSave=true;}
-            else if (i!=' '){
+                command=command+i;}
+            else if ((i==' ') && !commandSave){commandSave=true;}
+            else if ((i!=' ') && !comName){
                 name=name+i;
+            }
+            else if ((i==' ') && commandSave && !comName){comName=true;}
+            else if ((i!=' ') && commandSave && comName){
+                age=age+i;
             }
         }
 
@@ -39,6 +46,12 @@ public class Client {
              i.setCommand(deleteIndex);
              i.exe(commandName, hamsterFactory);
 
+         }
+         else if (command.equalsIgnoreCase("Поиск")){
+             SearchHamster searchHamster = new SearchHamster(c);
+             Invoker i=new Invoker();
+             i.setCommand(searchHamster);
+             i.exe(commandName, hamsterFactory);
          }
 
 
