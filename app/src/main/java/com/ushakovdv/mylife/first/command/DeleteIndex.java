@@ -8,17 +8,10 @@ public class DeleteIndex implements Interface {
     public DeleteIndex (Command command){this.command=command;}
     @Override
     public void execute(String commandName, HamsterFactory hamsterFactory) {
-        String name = "";
-        String command = "";
-        boolean commandSave = false;
-        for (char i : commandName.toCharArray()){
-            if ((i!=' ')&&(!commandSave)){
-                command=command+i;}
-            else if (i==' '){commandSave=true;}
-            else if (i!=' '){
-                name=name+i;
-            }
-        }
+        PartitionCommandName Str = new PartitionCommandName(commandName);
+        String name = Str.str(commandName,"Имя");;
+        //String comm = Str.str(commandName,"Команда");
+
 
         if ((Integer.parseInt(name)+1) <= hamsterFactory.fabric.size()){
             hamsterFactory.fabric.remove(Integer.parseInt(name));

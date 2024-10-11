@@ -6,24 +6,11 @@ public class Client {
     public  void execute (String commandName, HamsterFactory hamsterFactory){
 
         Command c = new Command();
-        String name = "";
-        String command = "";
-        String age = "";
-        boolean commandSave = false;
-        boolean comName = false;
+        PartitionCommandName pcn = new PartitionCommandName(commandName);
+        String name = pcn.str(commandName,"Имя");
+        String command = pcn.str(commandName,"Команда");
+        String age = pcn.str(commandName,"Возраст");
 
-        for (char i : commandName.toCharArray()){
-            if ((i!=' ')&&(!commandSave)){
-                command=command+i;}
-            else if ((i==' ') && !commandSave){commandSave=true;}
-            else if ((i!=' ') && !comName){
-                name=name+i;
-            }
-            else if ((i==' ') && commandSave && !comName){comName=true;}
-            else if ((i!=' ') && commandSave && comName){
-                age=age+i;
-            }
-        }
 
 
          if (command.equalsIgnoreCase("Создать")){

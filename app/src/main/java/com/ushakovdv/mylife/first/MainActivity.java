@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         hamsterFactory.start("Создать Barsik 26");
         hamsterFactory.start("Печать");
-        hamsterFactory.start("Поиск Barsik 25");
+        hamsterFactory.start("Поиск Barsik 26");
 
 /*
 
