@@ -7,6 +7,7 @@ public class ExecutePrint implements Interface{
     ExecutePrint (Command command1){this.command=command1;}
     @Override
     public void execute(String commandName, HamsterFactory hamsterFactory) {
+
 System.out.println(hamsterFactory.fabric);
     }
 }

@@ -11,19 +11,13 @@ public class ExecuteCreate implements Interface{
 
     @Override
     public void execute(String commandName, HamsterFactory hamsterFactory) {
-        String name = "";
-        String command = "";
-        boolean commandSave = false;
-        for (char i : commandName.toCharArray()){
-            if ((i!=' ')&&(!commandSave)){
-                command=command+i;}
-            else if (i==' '){commandSave=true;}
-            else if (i!=' '){
-                name=name+i;
-            }
-        }
+        PartitionCommandName pcn = new PartitionCommandName(commandName);
+        String name = pcn.str(commandName,"Имя");
+        String command = pcn.str(commandName,"Команда");
+        String age = pcn.str(commandName,"Возраст");
 
-        hamsterFactory.fabric.add(new Hamster(name,25));
+        hamsterFactory.fabric.add(new Hamster(name,Integer.parseInt(age)));
+
         System.out.println("Хомяк '" + name + "' создан и добавлен в хранилище");
 
     }

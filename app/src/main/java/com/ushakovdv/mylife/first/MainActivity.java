@@ -27,23 +27,13 @@ public class MainActivity extends AppCompatActivity {
 
         HamsterFactory hamsterFactory = new HamsterFactory();
 
-        hamsterFactory.start("Создать Barsik");
+        hamsterFactory.start("Создать Barsik 26");
         hamsterFactory.start("Печать");
-        Hamster hamster = new Hamster("Barsik",26);
+        hamsterFactory.start("Поиск Barsik 26");
 
-        for (Hamster i : hamsterFactory.fabric){
-            if(hamster.hashCode()==i.hashCode()){
-                if (hamster.equals(i)){
-                    System.out.println("Хомячки одинаковы");
-                 }
-                else {System.out.println("Не сошлись в полях");}
-            }
-            else {
-                System.out.println("не сошлись даже в хэшкоде");
-            }
+/*
 
-        }
-
+*/
 
 
         hamsterFactory.start("Удалить 0");

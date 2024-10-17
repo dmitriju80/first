@@ -6,17 +6,11 @@ public class Client {
     public  void execute (String commandName, HamsterFactory hamsterFactory){
 
         Command c = new Command();
-        String name = "";
-        String command = "";
-        boolean commandSave = false;
-        for (char i : commandName.toCharArray()){
-            if ((i!=' ')&&(!commandSave)){
-            command=command+i;}
-            else if (i==' '){commandSave=true;}
-            else if (i!=' '){
-                name=name+i;
-            }
-        }
+        PartitionCommandName pcn = new PartitionCommandName(commandName);
+        String name = pcn.str(commandName,"Имя");
+        String command = pcn.str(commandName,"Команда");
+        String age = pcn.str(commandName,"Возраст");
+
 
 
          if (command.equalsIgnoreCase("Создать")){
@@ -39,6 +33,12 @@ public class Client {
              i.setCommand(deleteIndex);
              i.exe(commandName, hamsterFactory);
 
+         }
+         else if (command.equalsIgnoreCase("Поиск")){
+             SearchHamster searchHamster = new SearchHamster(c);
+             Invoker i=new Invoker();
+             i.setCommand(searchHamster);
+             i.exe(commandName, hamsterFactory);
          }
 
 
